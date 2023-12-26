@@ -19,3 +19,4 @@ class ConsumeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Consume
         fields = ['food_consumed', 'user']
+

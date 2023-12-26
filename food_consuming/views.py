@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from .models import Food, Consume
 from django.http import HttpResponse
+# Create your views here.
+
+
 from django.views.generic import TemplateView
 
-# Create your views here.
+
 class IndexView(TemplateView):
     template_name = 'index.html'
 
@@ -34,3 +37,4 @@ class DeleteView(TemplateView):
         consumed_food = Consume.objects.get(id=kwargs['id'])
         consumed_food.delete()
         return redirect('/')
+
